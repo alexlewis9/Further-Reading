@@ -18,6 +18,3 @@ browser.runtime.onMessage.addListener((message, sender) => {
     return Promise.resolve(getLinks());
 });
 
-// window.onload = function() {
-//     document.getElementById('save-links').onclick = sendMessage;
-// }

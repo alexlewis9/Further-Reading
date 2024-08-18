@@ -23,6 +23,12 @@
     ],
     "background": {
         "scripts": ["background.js"]
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{71955c3e-5cd7-42f0-b462-7b418221d7a2}",
+            "strict_min_version": "57.0"
+        }
     }
   }
   
