@@ -24,6 +24,17 @@ function sendMessage(tab) {
 
 browser.browserAction.onClicked.addListener(sendMessage);
 
+browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
+    switch (reason) {
+      case "install":
+        {
+          const url = browser.runtime.getURL("installed.html");
+          await browser.tabs.create({ url });
+        }
+        break;
+    }
+  });
+
 // function disableGetLinksButton() {
 //     document.getElementById('save-links').textContent = 'Links saved!';
 //     document.getElementById('save-links').style.backgroundColor = 'gray';
